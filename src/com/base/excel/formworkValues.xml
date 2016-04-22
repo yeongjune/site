@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="formworkValuesSchema.xsd">
+
+	<formworkValues name="countries">
+		<formworkValue>中国</formworkValue>
+		<formworkValue>美国</formworkValue>
+		<formworkValue>加拿大</formworkValue>
+		<formworkValue>韩国</formworkValue>
+		<formworkValue>日本</formworkValue>
+		<formworkValue>德国</formworkValue>
+		<formworkValue>法国</formworkValue>
+		<formworkValue>意大利</formworkValue>
+		<formworkValue>荷兰</formworkValue>
+		<formworkValue>英国</formworkValue>
+		<formworkValue>俄罗斯</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="genders">
+		<formworkValue>男</formworkValue>
+		<formworkValue>女</formworkValue>
+	</formworkValues>
+	<formworkValues name="nations">
+		<formworkValue>汉族</formworkValue>
+		<formworkValue>回族</formworkValue>
+		<formworkValue>壮族</formworkValue>
+		<formworkValue>藏族</formworkValue>
+		<formworkValue>满族</formworkValue>
+		<formworkValue>水族</formworkValue>
+		<formworkValue>白族</formworkValue>
+		<formworkValue>京族</formworkValue>
+		<formworkValue>怒族</formworkValue>
+		<formworkValue>瑶族</formworkValue>
+		<formworkValue>侗族</formworkValue>
+		<formworkValue>土族</formworkValue>
+		<formworkValue>佤族</formworkValue>
+		<formworkValue>苗族</formworkValue>
+		<formworkValue>傣族</formworkValue>
+		<formworkValue>彝族</formworkValue>
+		<formworkValue>黎族</formworkValue>
+		<formworkValue>畲族</formworkValue>
+		<formworkValue>羌族</formworkValue>
+		<formworkValue>蒙古族</formworkValue>
+		<formworkValue>阿昌族</formworkValue>
+		<formworkValue>傈僳族</formworkValue>
+		<formworkValue>高山族</formworkValue>
+		<formworkValue>珞巴族</formworkValue>
+		<formworkValue>保安族</formworkValue>
+		<formworkValue>仡佬族</formworkValue>
+		<formworkValue>布朗族</formworkValue>
+		<formworkValue>哈尼族</formworkValue>
+		<formworkValue>毛南族</formworkValue>
+		<formworkValue>土家族</formworkValue>
+		<formworkValue>门巴族</formworkValue>
+		<formworkValue>朝鲜族</formworkValue>
+		<formworkValue>仫佬族</formworkValue>
+		<formworkValue>赫哲族</formworkValue>
+		<formworkValue>布依族</formworkValue>
+		<formworkValue>德昂族</formworkValue>
+		<formworkValue>基诺族</formworkValue>
+		<formworkValue>纳西族</formworkValue>
+		<formworkValue>锡伯族</formworkValue>
+		<formworkValue>东乡族</formworkValue>
+		<formworkValue>景颇族</formworkValue>
+		<formworkValue>裕固族</formworkValue>
+		<formworkValue>拉祜族</formworkValue>
+		<formworkValue>撒拉族</formworkValue>
+		<formworkValue>普米族</formworkValue>
+		<formworkValue>独龙族</formworkValue>
+		<formworkValue>塔吉克族</formworkValue>
+		<formworkValue>鄂温克族</formworkValue>
+		<formworkValue>塔塔尔族</formworkValue>
+		<formworkValue>哈萨克族</formworkValue>
+		<formworkValue>达斡尔族</formworkValue>
+		<formworkValue>维吾尔族</formworkValue>
+		<formworkValue>俄罗斯族</formworkValue>
+		<formworkValue>鄂伦春族</formworkValue>
+		<formworkValue>乌孜别克族</formworkValue>
+		<formworkValue>柯尔克孜族</formworkValue>
+	</formworkValues>
+	<formworkValues name="politicsStatuses">
+		<formworkValue>中共党员</formworkValue>
+		<formworkValue>中共预备党员</formworkValue>
+		<formworkValue>团员</formworkValue>
+		<formworkValue>群众</formworkValue>
+		<formworkValue>其它</formworkValue>
+	</formworkValues>
+	<formworkValues name="stateOfHealthes">
+		<formworkValue>良好</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="educationBackground">
+		<formworkValue>高中及以下</formworkValue>
+		<formworkValue>中专</formworkValue>
+		<formworkValue>大专</formworkValue>
+		<formworkValue>本科</formworkValue>
+		<formworkValue>研究生或以上</formworkValue>
+	</formworkValues>
+	<formworkValues name="educations">
+		<formworkValue>普通高中</formworkValue>
+		<formworkValue>中专</formworkValue>
+		<formworkValue>大专</formworkValue>
+		<formworkValue>本科</formworkValue>
+		<formworkValue>硕士</formworkValue>
+		<formworkValue>博士</formworkValue>
+		<formworkValue>双本科学历</formworkValue>
+		<formworkValue>双硕士学历</formworkValue>
+		<formworkValue>双博士学历</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="degrees">
+		<formworkValue>学士</formworkValue>
+		<formworkValue>硕士</formworkValue>
+		<formworkValue>无</formworkValue>
+	</formworkValues>
+	<formworkValues name="mandarins">
+		<formworkValue>一级甲等</formworkValue>
+		<formworkValue>一级乙等</formworkValue>
+		<formworkValue>二级甲等</formworkValue>
+		<formworkValue>二级乙等</formworkValue>
+		<formworkValue>三级甲等</formworkValue>
+		<formworkValue>三级乙等</formworkValue>
+	</formworkValues>
+	<formworkValues name="mandarinLevels">
+		<formworkValue>一级甲等</formworkValue>
+		<formworkValue>一级乙等</formworkValue>
+		<formworkValue>二级甲等</formworkValue>
+		<formworkValue>二级乙等</formworkValue>
+		<formworkValue>三级甲等</formworkValue>
+		<formworkValue>三级乙等</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="qualifications">
+		<formworkValue>幼儿园教师资格证</formworkValue>
+		<formworkValue>小学教师资格证</formworkValue>
+		<formworkValue>初级中学教师资格证</formworkValue>
+		<formworkValue>高级中学教师资格证</formworkValue>
+		<formworkValue>中等职业学校教师资格证</formworkValue>
+		<formworkValue>中等职业学校实习指导教师资格证</formworkValue>
+		<formworkValue>高等学校教师资格</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="teacherCerts">
+		<formworkValue>小学特级教师</formworkValue>
+		<formworkValue>小学一级教师</formworkValue>
+		<formworkValue>小学二级教师</formworkValue>
+		<formworkValue>小学三级教师</formworkValue>
+		<formworkValue>其他</formworkValue>
+		<formworkValue>中学特级教师</formworkValue>
+		<formworkValue>中学一级教师</formworkValue>
+		<formworkValue>中学二级教师</formworkValue>
+		<formworkValue>中学三级教师</formworkValue>
+	</formworkValues>
+	<formworkValues name="titles">
+		<formworkValue>高级</formworkValue>
+		<formworkValue>一级</formworkValue>
+		<formworkValue>二级</formworkValue>
+		<formworkValue>三级</formworkValue>
+		<formworkValue>其他</formworkValue>
+	</formworkValues>
+	<formworkValues name="yesOrNo">
+		<formworkValue>是</formworkValue>
+		<formworkValue>否</formworkValue>
+	</formworkValues>
+	<formworkValues name="admit">
+		<formworkValue>是</formworkValue>
+		<formworkValue>否</formworkValue>
+		<formworkValue>待公布</formworkValue>
+	</formworkValues>
+
+	<formworkValues name="statisticsType">
+		<formworkValue>自动统计</formworkValue>
+		<formworkValue>手动评分</formworkValue>
+	</formworkValues>
+	<formworkValues name="scoreType">
+		<formworkValue>达标</formworkValue>
+		<formworkValue>加分</formworkValue>
+		<formworkValue>扣分</formworkValue>
+		<formworkValue>递增</formworkValue>
+		<formworkValue>递减</formworkValue>
+		<formworkValue>换算</formworkValue>
+		<formworkValue>设定分值范围</formworkValue>
+	</formworkValues>
+
+	<formworkValues name="status">
+		<formworkValue>正常</formworkValue>
+		<formworkValue>待审</formworkValue>
+		<formworkValue>停用</formworkValue>
+	</formworkValues>
+	<formworkValues name="relations">
+		<formworkValue>父亲</formworkValue>
+		<formworkValue>母亲</formworkValue>
+		<formworkValue>监护人</formworkValue>
+	</formworkValues>
+
+</root>

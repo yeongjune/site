@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0">
+					<xs:element name="workbook" maxOccurs="unbounded">
+						<xs:complexType mixed="true">
+							<xs:sequence>
+								<xs:element name="sheet">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="export" minOccurs="0" maxOccurs="1">
+												<xs:complexType>
+													<xs:attribute name="name" type="xs:string" fixed="export" use="required"></xs:attribute>
+													<xs:attribute name="class" type="xs:string" use="required"></xs:attribute>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="import" minOccurs="0" maxOccurs="1">
+												<xs:complexType>
+													<xs:attribute name="name" type="xs:string" fixed="import" use="required"></xs:attribute>
+													<xs:attribute name="class" type="xs:string" use="required"></xs:attribute>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="table">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="column" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+																<xs:attribute name="column" type="xs:string" use="required"></xs:attribute>
+																<xs:attribute name="type" type="xs:string" use="required"></xs:attribute>
+																<xs:attribute name="format" type="xs:string"></xs:attribute>
+																<xs:attribute name="reg" type="xs:string"></xs:attribute>
+																<xs:attribute name="regTip" type="xs:string"></xs:attribute>
+																<xs:attribute name="nameSpace" type="xs:string"></xs:attribute>
+																<xs:attribute name="valueMethod" type="xs:string"></xs:attribute>
+																<xs:attribute name="linkage" type="xs:string"></xs:attribute>
+																<xs:attribute name="checkMethod" type="xs:string"></xs:attribute>
+																<xs:attribute name="sort" type="xs:int"></xs:attribute>
+																<xs:attribute name="unique" type="xs:string"></xs:attribute>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="name" type="xs:string" fixed="columns" use="required"></xs:attribute>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="name" type="xs:string" fixed="Sheet1" use="required"></xs:attribute>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

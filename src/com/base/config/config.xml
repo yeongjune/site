@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="configSchema.xsd">
+
+<!-- 使用到的文字 -->
+	<!-- 网站标语 -->
+	<config name="title" value="广州市睿驰计算机科技有限公司 - 建站系统" />
+<!-- 使用到的文字 -->
+
+	
+<!-- 使用到的文件路径 -->
+	<!-- 上传附件文件路径 -->
+	<config name="uploadPath" value="D:/uploadPath" />
+<!-- 使用到的文件路径 -->
+
+
+	<!-- 每页显示数量 -->
+	<config name="pageSize" value="10"/>
+	<config name="currentPage" value="1"/>
+	
+	<!-- 每页显示数量可选数 -->
+	<configs name="pageSizes">
+		<config name="20" value="20"/>
+		<config name="15" value="15"/>
+		<config name="10" value="10"/>
+		<config name="8" value="8"/>
+	</configs>
+
+	<!-- 不需要登录就可以访问的菜单 -->
+	<configs name="excludeUrl">
+	
+		<!-- 注册登录、重置密码 -->
+		<config name="/login" value="/login/" />
+		<config name="/load/" value="/load/" />
+		<config name="/uploadFile/save" value="/uploadFile/save" />
+		<!-- 华颖报名网站注册报名处理  -->
+		<config name="/register/" value="/register/" />
+		<!-- 华颖报名网站-个人中心  -->
+		<config name="/userCenter/" value="/userCenter/" />
+		<!-- 导出华颖报名系统学生信息 -->
+		<config name="/report/exportStudentReport" value="/report/exportStudentReport" />
+		<config name="/report/exportApplyReport" value="/report/exportApplyReport" />
+		<config name="/report/exportScodeReport" value="/report/exportScodeReport" />
+		
+		<config name="/message/save" value="/message/save" />
+		<config name="/message/getMsgByName" value="/message/getMsgByName" />
+		<config name="/siteUser/toLogin" value="/siteUser/toLogin" />
+		<config name="/siteUser/doLogin" value="/siteUser/doLogin" />
+		<config name="/siteUser/toRegister" value="/siteUser/toRegister" />
+		<config name="/siteUser/doRegister" value="/siteUser/doRegister" />
+		<config name="/siteUser/logout" value="/siteUser/logout" />
+		<config name="/siteUser/toEditPwd" value="/siteUser/toEditPwd" />
+		<config name="/siteUser/editPwd" value="/siteUser/editPwd" />
+		<config name="/student/toPrintPage" value="/student/toPrintPage" />
+		<config name="/articleClickCount/save" value="/articleClickCount/save" />
+		<config name="/articleClickCount/getClickedOption" value="/articleClickCount/getClickedOption" />
+		<config name="/articleClickCount/getMessage" value="/articleClickCount/getMessage" />
+		<config name="/articleClickCount/saveVote" value="/articleClickCount/saveVote" />
+		<config name="/articleClickCount/getVoteNum" value="/articleClickCount/getVoteNum" />
+		<config name="/articleClickCount/batchSave" value="/articleClickCount/batchSave" />
+		<config name="/article/updateViewCount" value="/article/updateViewCount" />
+		<config name="/statistics/saveOrUpdatePageView" value="/statistics/saveOrUpdatePageView" />
+		<config name="/statistics/findPageView" value="/statistics/findPageView" />
+		<!-- 民航子弟学校初中新生入学申请 -->
+		<config name="/dzStudent/doRegister.action" value="/dzStudent/doRegister.action" />
+		<!-- 民航子弟学校小学新生入学申请 -->
+		<config name="/dzStudent2/doRegister.action" value="/dzStudent2/doRegister.action" />
+		<!-- 集贤小学新生入学申请 -->
+		<config name="/jxStudent/doRegister.action" value="/jxStudent/doRegister.action" />
+		<!-- 长兴中学借读报名申请 -->
+		<config name="/cxStudent/doRegister.action" value="/cxStudent/doRegister.action" />
+		<!-- 获取站点的报名设置 -->
+		<config name="/applyInfo/getApplyInfo.action" value="/applyInfo/getApplyInfo.action" />
+		
+		<!-- 民航子弟学校初中新生入学申请 -->
+		<config name="/zd_student/doRegister.action" value="/zd_student/doRegister.action" />
+		<!-- 民航子弟学校小学新生入学申请 -->
+		<config name="/zd_student2/doRegister.action" value="/zd_student2/doRegister.action" />
+		
+		<!-- 民航子弟小学打印链接 -->
+		<config name="/zd_student/toPrint2.action" value="/zd_student/toPrint2.action" />
+		
+		<!-- 民航子弟中学打印链接 -->
+		<config name="/zd_student/toPrint.action" value="/zd_student/toPrint.action" />
+
+		<!-- 民航子弟中学修改信息 -->
+		<config name="/zd_student/toEdit.action" value="/zd_student/toEdit.action" />
+		<!-- 民航子弟中学修改信息 -->
+		<config name="/zd_student/doEdit.action" value="/zd_student/doEdit.action" />
+		<!-- 民航子弟小学修改信息 -->
+		<config name="/zd_student/toEdit2.action" value="/zd_student/toEdit2.action" />
+		<!-- 民航子弟小学修改信息 -->
+		<config name="/zd_student/doEdit2.action" value="/zd_student/doEdit2.action" />
+
+		<!-- 民航打印考场 -->
+		<config name="/mh_exam/toPrint.action" value="/mh_exam/toPrint.action" />
+		
+		<!-- 工具方法 -->
+		<config name="/tools/" value="/tools/"/>
+		
+		<!-- 摇号系统放行 -->
+		<config name="/lottery/login/" value="/lottery/login/"/>
+		<config name="/lottery/student/toCheck.action" value="/lottery/student/toCheck.action"/>
+		<config name="/lottery/student/check.action" value="/lottery/student/check.action"/>
+		
+		
+		<!-- 信访系统放行 -->
+		<config name="/xinfangAction/getList.action" value="/xinfangAction/getList.action"/>
+		<config name="/xinfangAction/save.action" value="/xinfangAction/save.action"/>
+		<config name="/xinfangAction/toWebView.action" value="/xinfangAction/toWebView.action"/>
+
+		
+        <!-- 图片点赞 -->
+        <config name="/article/imgSmile.action" value="/article/imgSmile.action"/>
+
+		<!-- 特教 -->
+		<config name="/parent/" value="/parent/"/>
+		<config name="/school/load" value="/school/load"/>
+		<config name="/declare/save" value="/declare/save"/>
+		<config name="/declare/personal" value="/declare/personal"/>
+		<config name="/image/upload.action" value="/image/upload.action"/>
+		<config name="/attachment/upload.action" value="/attachment/upload.action"/>
+		<config name="/attachment/listDeclareFile.action" value="/attachment/listDeclareFile.action"/>
+		<config name="/attachment/webDelete.action" value="/attachment/webDelete.action"/>
+		<config name="/declare/toWebView.action" value="/declare/toWebView.action"/>
+		<config name="/declare/apply.action" value="/declare/apply.action"/>
+		<config name="/declare/delete.action" value="/declare/delete.action"/>
+	</configs>
+	<!-- 不需要登录就可以访问的菜单 -->
+	
+	<!-- 管理后台菜单 -->
+	<configs name="authorityUrl">
+		<config name="/authority" value="/authority" />
+		<config name="/system" value="/system" />
+		<config name="/excel" value="/excel" />
+	</configs>
+	<!-- 管理后台菜单 -->
+	
+</root>
+

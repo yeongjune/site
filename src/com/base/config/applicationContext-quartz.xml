@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	
+	<!-- 调用的类 -->	
+	<bean id="effectiveUrl" class="com.base.util.EffectiveUrl" >
+		
+	</bean> 
+	<!-- 需要调用的类方法 -->
+	<bean id="effective" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 需要调用的类 -->
+		<property name="targetObject">
+			<ref bean="effectiveUrl"/>
+		</property>
+		<property name="concurrent" value="false"/>
+		<!-- 类里面的方法 -->
+		<property name="targetMethod" value="effective"/> 
+		 
+	</bean>	
+	<!-- 需要调用的类方法 -->
+	<bean id="declareActionMethod" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 需要调用的类 -->
+		<property name="targetObject">
+			<ref bean="effectiveUrl"/>
+		</property>
+		<property name="concurrent" value="false"/>
+		<!-- 类里面的方法 -->
+		<property name="targetMethod" value="upgrade"/> 
+		 
+	</bean>	
+	 
+	<!-- 定义处理的时间 -->
+	 <bean id="checkTriggers" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	 	<property name="jobDetail">
+	 		<ref bean="effective"/>
+	 	</property>
+	 	<property name="cronExpression">
+	 	<!--每天凌晨3点-->
+	 	<value>0 0 3 * * ? </value>
+	 	</property>
+	 </bean>
+	<!-- 定义处理的时间 -->
+	 <bean id="declareActionMethodT" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	 	<property name="jobDetail">
+	 		<ref bean="declareActionMethod"/>
+	 	</property>
+	 	<property name="cronExpression">
+	 	<!--每年的9月一号1点-->
+	 	<value>0 0 1 1 9 ?</value>
+	 	</property>
+	 </bean>
+	 
+	 <!-- 加入到处理 -->
+	 <bean  class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref local="checkTriggers"></ref>
+				<ref local="declareActionMethodT"></ref>
+			</list>
+		</property>
+		<!-- 每次开启一个线程 -->
+		<property name="quartzProperties">
+			<map>
+				<entry key="org.quartz.threadPool.threadCount" value="1"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>		
+		

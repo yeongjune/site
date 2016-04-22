@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="tableSchema.xsd">
+	<!-- 成绩导入导出 -->
+	<workbook name="interviewResult">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.ResultExport"></export>
+			<import name="import" class="com.base.excel.impl.ResultImport"></import>
+			<table name="columns">
+				<column name="学校名称" column="graduate" type="String" format="@"></column>			
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="联系电话" column="phoneNumber" type="String" format="@"></column>
+				<column name="面试批次" column="batch" type="String" format="@"></column>
+				<column name="面试时间" column="interviewDate" type="String" format="@"></column>
+				<column name="是否参加面试" column="interview" type="String" format="@" nameSpace="yesOrNo"></column>
+				<column name="是否录取" column="admit" type="String" format="@" nameSpace="admit"></column>
+				<column name="面试成绩" column="interviewScore" type="Double" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 学生信息汇总导出 -->
+	<workbook name="studentInfor">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.StudentInforExport"></export>
+			<table name="columns">
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="证件类型" column="certificateType" type="String" format="@" valueMethod="certificateType"></column>
+				<column name="证件号码" column="certificate" type="String" format="@"></column>
+				<column name="小学籍号" column="enrollmentNumbers" type="String" format="@"></column>
+				<column name="民族" column="nationality" type="String" format="@"></column>
+				<column name="籍贯" column="nativePlace" type="String" format="@"></column>
+				<column name="户籍所在地" column="domicile" type="String" format="@"></column>
+				<column name="家庭地址" column="homeAddress" type="String" format="@"></column>
+				<column name="毕业院校" column="graduate" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="String" format="@"></column>
+				<column name="手机号" column="phoneNumber" type="String" format="@"></column>
+				<column name="语文成绩" column="chinese" type="String" format="@"></column>
+				<column name="数学成绩" column="maths" type="String" format="@"></column>
+				<column name="英语成绩" column="english" type="String" format="@"></column>
+				<column name="面试成绩" column="interviewScore" type="String" format="@"></column>
+				<column name="综合成绩" column="allTotal" type="String" format="@"></column>
+				<column name="是否参加面试" column="interview" type="String" format="@"   nameSpace="yesOrNo"></column>
+				<column name="是否录取" column="admit" type="String" format="@"   nameSpace="admit"></column>   
+				<column name="报名时间" column="createTime" type="String" format="@"></column>
+				<column name="面试时间" column="interviewDate" type="String" format="@"></column>
+				<column name="联系人1姓名" column="fullName1" type="String" format="@"></column>
+				<column name="联系人1关系" column="relationship1" type="String" format="@"></column>
+				<column name="联系人1电话" column="telephone1" type="String" format="@"></column>
+				<column name="联系人1单位" column="unit1" type="String" format="@"></column>
+				<column name="联系人1职位" column="position1" type="String" format="@"></column>
+				<column name="联系人2姓名" column="fullName2" type="String" format="@"></column>
+				<column name="联系人2关系" column="relationship2" type="String" format="@"></column>
+				<column name="联系人2电话" column="telephone2" type="String" format="@"></column>
+				<column name="联系人2单位" column="unit2" type="String" format="@"></column>
+				<column name="联系人2职位" column="position2" type="String" format="@"></column>
+				<column name="五六年级获奖情况和个人特长" column="rewardHobby" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 成绩统计导出 -->
+	<workbook name="scodeInfor">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.ScodeExport"></export>
+			<table name="columns">
+				<column name="学校名" column="graduate" type="String" format="@"></column>
+				<column name="报名人数" column="applyCount" type="String" format="@"></column>
+				<column name="面试人数" column="interviewCount" type="String" format="@"></column>
+				<column name="平均语文成绩" column="avgOfChinese" type="String" format="@"></column>
+				<column name="平均数学成绩" column="avgOfMaths" type="String" format="@"></column>
+				<column name="平均英语成绩" column="avgOfEnglish" type="String" format="@"></column>
+				<column name="平均面试成绩" column="AvgOfInterview" type="String" format="@"></column> 
+				<column name="录取人数" column="admitCount" type="String" format="@"></column>
+				<column name="未录取人数" column="notAdmitCount" type="String" format="@"></column>
+				<column name="待公布录取" column="watingAdmitCount" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 报名统计导出 -->
+	<workbook name="applyInfor">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.ApplyExport"></export>
+			<table name="columns">
+				<column name="学校名" column="graduate" type="String" format="@"></column>
+				<column name="报名人数" column="applyCount" type="String" format="@"></column>
+				<column name="面试人数" column="interviewCount" type="String" format="@"></column>
+				<column name="待审核人数" column="watingCheck" type="String" format="@"></column>
+				<column name="审核通过人数" column="passCheck" type="String" format="@"></column>
+				<column name="审核回退人数" column="backCheck" type="String" format="@"></column>
+				<column name="审核不通过人数" column="notPassCheck" type="String" format="@"></column> 
+				<column name="录取人数" column="admitCount" type="String" format="@"></column>
+				<column name="未录取人数" column="notAdmitCount" type="String" format="@"></column>
+				<column name="待公布录取" column="watingAdmitCount" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	
+	<!-- 导入/导出面试时间和批次 -->
+	<workbook name="interviewDateAndBatch">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.InterviewDateAndBatchExport"></export>
+			<import name="import" class="com.base.excel.impl.InterviewDateAndBatchImport"></import>
+			<table name="columns">
+				<column name="学校名称" column="graduate" type="String" format="@"></column>			
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="联系电话" column="phoneNumber" type="String" format="@"></column>
+				<column name="面试时间(例子:2014-06-28 9:00-12:00)" column="interviewDate" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 导入/导出面试时间和批次(民航初中报名) -->
+	<workbook name="interviewDateAndBatch1">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.InterviewDateAndBatchExport1"></export>
+			<import name="import" class="com.base.excel.impl.InterviewDateAndBatchImport1"></import>
+			<table name="columns">
+				<column name="编号" column="number" type="String" format="@"></column>
+				<column name="准考证号" column="testCard" type="String" format="@"></column>
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="String" format="@"></column>
+				<column name="全国学籍号" column="inSchoolNo" type="String" format="@" ></column>
+				<column name="是否广州学籍" column="isGZSchoolNo" type="String" format="@" ></column>
+				<column name="广州学籍好" column="inGzSchoolNo" type="String" format="@" ></column>
+				<column name="曾任何种职务" column="position" type="String" format="@" ></column>
+				<column name="户籍" column="nativePlace" type="String" format="@" ></column>
+				<column name="户口所在" column="domicile" type="String" format="@" ></column>
+				<column name="是否是农业户口" column="IsPeasant" type="String" format="@" ></column>
+				<column name="学科竞赛获奖情况" column="rewardHobby" type="String" format="@" ></column>
+				<column name="家庭电话" column="homePhone" type="String" format="@"></column>
+				<column name="父亲联系电话" column="fatherPhone" type="String" format="@"></column>
+				<column name="父亲身份证号" column="fatherIDCard" type="String" format="@"></column>
+				<column name="母亲联系电话" column="matherPhone" type="String" format="@"></column>
+				<column name="母亲身份证号" column="motherIDCard" type="String" format="@"></column>
+				<column name="现家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="毕业学校" column="graduate" type="String" format="@"></column>			
+				<column name="单位" column="companyName" type="String" format="@"></column>			
+				<column name="面试时间(例子:2014-06-28 9:00-12:00)" column="interviewDate" type="String" format="@"></column>
+				<column name="是否面试" column="interview" type="String" format="@"></column>
+				<column name="面试成绩" column="interviewScore" type="String" format="@"></column>
+				<column name="是否录取" column="admit" type="String" format="@"></column>
+				<column name="考试教室" column="roomNo" type="String" format="@"></column>
+				<column name="家庭主要成员1-关系" column="relationship1" type="String" format="@"></column>
+				<column name="家庭主要成员1-姓名" column="fullName1" type="String" format="@"></column>
+				<column name="家庭主要成员1-工作单位" column="unit1" type="String" format="@"></column>
+				<column name="家庭主要成员1-联系电话" column="telephone1" type="String" format="@"></column>
+				<column name="家庭主要成员2-关系" column="relationship2" type="String" format="@"></column>
+				<column name="家庭主要成员2-姓名" column="fullName2" type="String" format="@"></column>
+				<column name="家庭主要成员2-工作单位" column="unit2" type="String" format="@"></column>
+				<column name="家庭主要成员2-联系电话" column="telephone2" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 成绩管理中导出学生的面试情况以及个人详细信息(民航初中报名) -->
+	<workbook name="interviewScoreMH">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.InterviewSroreExport"></export>
+			<import name="import" class="com.base.excel.impl.InterviewDateAndBatchImport1"></import>
+			<table name="columns">
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="String" format="@" nameSpace="genders"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="联系电话" column="homePhone" type="String" format="@"></column>
+				<column name="父亲联系电话" column="fatherPhone" type="String" format="@"></column>
+				<column name="母亲联系电话" column="matherPhone" type="String" format="@"></column>
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="毕业学校" column="graduate" type="String" format="@"></column>			
+				<column name="单位" column="companyName" type="String" format="@"></column>			
+				<column name="面试时间(例子:2014-06-28 9:00-12:00)" column="interviewDate" type="String" format="@"></column>
+				<column name="是否面试(0否，1是)" column="interview" type="String" format="@"></column>
+				<column name="面试成绩" column="interviewScore" type="String" format="@"></column>
+				<column name="是否录取(-1待公布，0不录取，1录取)" column="admit" type="String" format="@"></column>
+				<column name="父亲身份证号" column="fatherIDCard" type="String" format="@"></column>
+				<column name="母亲身份证号" column="motherIDCard" type="String" format="@"></column>
+				<column name="考试教室" column="roomNo" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 成绩管理中导出学生的面试情况以及个人详细信息(民航小学报名) -->
+	<workbook name="interviewScoreMH2">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.InterviewSroreExport2"></export>
+			<import name="import" class="com.base.excel.impl.InterviewDateAndBatchImport1"></import>
+			<table name="columns">
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="曾用名" column="usedName" type="String" format="@"></column>
+				<column name="国家" column="country" type="String" format="@"></column>
+				<column name="民族" column="nationality" type="String" format="@"></column>
+				<column name="港澳台侨外" column="isOutside" type="String" format="@"></column>
+				<column name="政治面貌" column="politicsStatus" type="String" format="@"></column>
+				<column name="通讯地址" column="mailingAddress" type="String" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="String" format="@" nameSpace="genders"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="联系电话" column="homePhone" type="String" format="@"></column>
+				<!-- <column name="父亲联系电话" column="fatherPhone" type="String" format="@"></column>
+				<column name="母亲联系电话" column="matherPhone" type="String" format="@"></column> -->
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="毕业学校" column="graduate" type="String" format="@"></column>			
+				<column name="单位" column="companyName" type="String" format="@"></column>			
+				<column name="面试时间(例子:2014-06-28 9:00-12:00)" column="interviewDate" type="String" format="@"></column>
+				<column name="是否面试(0否，1是)" column="interview" type="String" format="@"></column>
+				<column name="面试成绩" column="interviewScore" type="String" format="@"></column>
+				<column name="是否录取(-1待公布，0不录取，1录取)" column="admit" type="String" format="@"></column>
+				<!-- <column name="父亲身份证号" column="fatherIDCard" type="String" format="@"></column>
+				<column name="母亲身份证号" column="motherIDCard" type="String" format="@"></column> -->
+				<column name="考试教室" column="roomNo" type="String" format="@"></column>
+				<column name="主要成员1（关系，姓名，民族，电话，户籍所在地，身份证号，工作单位）" column="main1" type="String" format="@"></column>
+				<column name="主要成员2（关系，姓名，民族，电话，户籍所在地，身份证号，工作单位）" column="main2" type="String" format="@"></column>
+				
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 导入/导出面试时间和批次(民航小学报名) -->
+	<workbook name="interviewDateAndBatch2">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.InterviewDateAndBatchExport2"></export>
+			<import name="import" class="com.base.excel.impl.InterviewDateAndBatchImport2"></import>
+			<table name="columns">
+				<column name="编号" column="number" type="String" format="@"></column>
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="姓名拼音" column="namePinyin" type="String" format="@"></column>
+				<column name="曾用名" column="usedName" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@" nameSpace="genders"></column>
+				<column name="生日" column="birthday" type="String" format="@"></column>
+				<column name="出生地址" column="birthdayAddress" type="String" format="@"></column>
+				<column name="国家" column="country" type="String" format="@"></column>
+				<column name="民族" column="nationality" type="String" format="@"></column>
+				<column name="政治面貌" column="politicsStatus" type="String" format="@"></column>
+				<column name="港澳台侨外" column="isOutside" type="String" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="毕业幼儿园" column="graduate" type="String" format="@"></column>
+				<column name="健康情况" column="healthyCondition" type="String" format="@"></column>
+				<column name="特长" column="rewardHobby" type="String" format="@"></column>			
+				<column name="籍贯" column="nativePlace" type="String" format="@"></column>
+				<column name="户口所在地" column="domicile" type="String" format="@"></column>
+				<column name="户口性质" column="peasant" type="String" format="@"></column>
+				<column name="现家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="通讯地址" column="mailingAddress" type="String" format="@"></column>
+				<column name="家庭电话" column="homePhone" type="String" format="@"></column>
+				<column name="单位" column="companyName" type="String" format="@"></column>
+				<column name="备注" column="remark" type="String" format="@"></column>
+				
+				<column name="家庭主要成员1-关系" column="relationship1" type="String" format="@"></column>
+				<column name="家庭主要成员1-姓名" column="fullName1" type="String" format="@"></column>
+				<column name="家庭主要成员1-民族" column="nationality1" type="String" format="@"></column>
+				<column name="家庭主要成员1-单位" column="unit1" type="String" format="@"></column>
+				<column name="家庭主要成员1-户口所在地" column="domicile1" type="String" format="@"></column>
+				<column name="家庭主要成员1-身份证号" column="IDCard1" type="String" format="@"></column>
+				<column name="家庭主要成员2-关系" column="relationship2" type="String" format="@"></column>
+				<column name="家庭主要成员2-姓名" column="fullName2" type="String" format="@"></column>
+				<column name="家庭主要成员2-民族" column="nationality2" type="String" format="@"></column>
+				<column name="家庭主要成员2-单位" column="unit2" type="String" format="@"></column>
+				<column name="家庭主要成员2-户口所在地" column="domicile2" type="String" format="@"></column>
+				<column name="家庭主要成员2-身份证号" column="IDCard2" type="String" format="@"></column>
+				
+				<column name="面试时间(例子:2014-06-28 9:00-12:00)" column="interviewDate" type="String" format="@"></column>
+				<column name="是否面试" column="interview" type="String" format="@"></column>
+				<column name="面试教室" column="roomNo" type="String" format="@"></column>
+				<column name="面试分数" column="interviewScore" type="String" format="@"></column>
+				<column name="是否录取" column="admit" type="String" format="@"></column>
+				
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="SiteUser">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.SiteUserExport" />
+			<import name="import" class="com.base.excel.impl.SiteUserImport"/>
+			<table name="columns">
+				<column name="帐号" column="acount" type="String" format="@"></column>			
+				<column name="密码" column="password" type="String" format="@"></column>
+				<column name="邮箱" column="email" type="String" format="@"></column>
+				<column name="状态(-2审核不通过,1启用)" column="status" type="Integer" format="@"></column>
+				<column name="身份" column="identity" type="String" format="@"></column>
+				<column name="部门" column="department" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 导出民航子弟学校初中报名的学生信息 -->
+	<workbook name="dzStudent">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.DzStudentExport"></export>
+			<table name="columns">
+			    <column name="hide_id" column="id" type="String" format="@"></column>
+			    <column name="hide_1" column="nativePlaceProvince" type="String" format="@"></column>
+				<column name="hide_2" column="nativePlaceCity" type="String" format="@"></column>
+				<column name="hide_3" column="fullName1" type="String" format="@"></column>
+				<column name="hide_4" column="relationship1" type="String" format="@"></column>
+				<column name="hide_5" column="unit1" type="String" format="@"></column>
+				<column name="hide_6" column="telephone1" type="String" format="@"></column>
+				<column name="hide_7" column="fullName2" type="String" format="@"></column>
+				<column name="hide_8" column="relationship2" type="String" format="@"></column>
+				<column name="hide_9" column="unit2" type="String" format="@"></column>
+				<column name="hide_10" column="telephone2" type="String" format="@"></column>
+				<column name="hide_11" column="headPicUrl" type="String" format="@"></column>
+				<column name="hide_12" column="domiciProvince" type="String" format="@"></column>
+				<column name="hide_13" column="domicilCity" type="String" format="@"></column>
+				<column name="hide_14" column="domicileArea" type="String" format="@"></column>
+				<column name="hide_15" column="isDelete" type="String" format="@"></column>
+				<column name="hide_16" column="siteId" type="String" format="@"></column>
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="性别" column="gender" type="String" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="学籍号" column="inSchoolNo" type="String" format="@"></column>
+				<column name="毕业学校" column="graduate" type="String" format="@"></column>
+				<column name="曾任职位" column="position" type="String" format="@"></column>
+				<column name="籍贯" column="nativePlace" type="String" format="@"></column>
+				<column name="户籍所在" column="domicil" type="String" format="@"></column>
+				<column name="是否农业" column="IsPeasant" type="String" format="@"></column>
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="家庭电话" column="homePhone" type="String" format="@"></column>
+				<column name="父亲电话" column="fatherPhone" type="String" format="@"></column>
+				<column name="母亲电话" column="matherPhone" type="String" format="@"></column>
+				<column name="单位" column="companyName" type="String" format="@"></column>
+				<column name="报名日期" column="createTime" type="String" format="@"></column>
+				<column name="家庭主要成员1" column="familyMember1" type="String" format="@"></column>
+				<column name="家庭主要成员2" column="familyMember2" type="String" format="@"></column>
+				<column name="学科竞赛获奖情况" column="rewardHobby" type="String" format="@"></column>
+				
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 导出民航子弟学校小学报名的学生信息 -->
+	<workbook name="dzStudent2">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.DzStudent2Export"></export>
+			<table name="columns">
+			    <column name="hide_id" column="id" type="String" format="@"></column>
+			    <column name="hide_1" column="nativePlaceProvince" type="String" format="@"></column>
+				<column name="hide_2" column="nativePlaceCity" type="String" format="@"></column>
+				<column name="hide_3" column="fullName1" type="String" format="@"></column>
+				<column name="hide_4" column="relationship1" type="String" format="@"></column>
+				<column name="hide_5" column="unit1" type="String" format="@"></column>
+				<column name="hide_6" column="telephone1" type="String" format="@"></column>
+				<column name="hide_7" column="fullName2" type="String" format="@"></column>
+				<column name="hide_8" column="relationship2" type="String" format="@"></column>
+				<column name="hide_9" column="unit2" type="String" format="@"></column>
+				<column name="hide_10" column="telephone2" type="String" format="@"></column>
+				<column name="hide_11" column="headPicUrl" type="String" format="@"></column>
+				<column name="hide_12" column="domiciProvince" type="String" format="@"></column>
+				<column name="hide_13" column="domicilCity" type="String" format="@"></column>
+				<column name="hide_14" column="domicileArea" type="String" format="@"></column>
+				<column name="hide_15" column="isDelete" type="String" format="@"></column>
+				<column name="hide_16" column="siteId" type="String" format="@"></column>
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="曾用名" column="usedName" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="民族" column="nationality" type="String" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="毕业幼儿园" column="graduate" type="String" format="@"></column>
+				<column name="健康情况" column="healthyCondition" type="String" format="@"></column>
+				<column name="特长" column="rewardHobby" type="String" format="@"></column>
+				<column name="籍贯" column="nativePlace" type="String" format="@"></column>
+				<column name="户籍所在" column="domicil" type="String" format="@"></column>
+				<column name="是否农业" column="IsPeasant" type="String" format="@"></column>
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="家庭电话" column="homePhone" type="String" format="@"></column>
+				<column name="父亲电话" column="fatherPhone" type="String" format="@"></column>
+				<column name="母亲电话" column="matherPhone" type="String" format="@"></column>
+				<column name="单位" column="companyName" type="String" format="@"></column>
+				<column name="备注" column="remark" type="String" format="@"></column>
+				<column name="报名日期" column="createTime" type="String" format="@"></column>
+				<column name="家庭主要成员1" column="familyMember1" type="String" format="@"></column>
+				<column name="家庭主要成员2" column="familyMember2" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<!-- 导出集贤小学学生信息 -->
+	<workbook name="jxStudent">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.JxStudentExport"></export>
+			<table name="columns">
+			    <column name="hide_0" column="id" type="String" format="@"></column>
+			    <column name="hide_1" column="siteId" type="String" format="@"></column>
+			    <column name="hide_2" column="headPicUrl" type="String" format="@"></column>
+			    <column name="hide_3" column="nativePlaceProvince" type="String" format="@"></column>
+			    <column name="hide_4" column="nativePlaceCity" type="String" format="@"></column>
+			    <column name="hide_5" column="isDelete" type="String" format="@"></column>
+			    <column name="hide_6" column="relationship1" type="String" format="@"></column>
+			    <column name="hide_7" column="fullName1" type="String" format="@"></column>
+			    <column name="hide_8" column="unit1" type="String" format="@"></column>
+			    <column name="hide_9" column="telephone1" type="String" format="@"></column>
+			    <column name="hide_10" column="relationship2" type="String" format="@"></column>
+			    <column name="hide_11" column="fullName2" type="String" format="@"></column>
+			    <column name="hide_12" column="unit2" type="String" format="@"></column>
+			    <column name="hide_13" column="telephone2" type="String" format="@"></column>
+			    
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="曾用名" column="usedName" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="Date" format="@"></column>
+				<column name="身份证号" column="IDCard" type="String" format="@"></column>
+				<column name="民族" column="nationality" type="String" format="@"></column>
+				<column name="籍贯" column="nativePlace" type="String" format="@"></column>
+				<column name="健康状况" column="healthyCondition" type="String" format="@"></column>
+				<column name="个人特长" column="rewardHobby" type="String" format="@"></column>
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="户口所在地" column="domicile" type="String" format="@"></column>
+				<column name="第一联系人" column="familyMember1" type="String" format="@"></column>
+				<column name="第二联系人" column="familyMember2" type="String" format="@"></column>
+				<column name="地段生" column="dds" type="String" format="@"></column>
+				<column name="业主生" column="yzs" type="String" format="@"></column>
+				<column name="广州户籍非地段生" column="gzhjfdds" type="String" format="@"></column>
+				<column name="非广州户籍学生" column="fgzhjxs" type="String" format="@"></column>
+				<column name="体检表" column="tjb" type="String" format="@"></column>
+				<column name="预防接种证" column="yfjzzh" type="String" format="@"></column>
+				<column name="计生证" column="jszh" type="String" format="@"></column>
+				<column name="户口本" column="hkb" type="String" format="@"></column>
+				<column name="就业证明" column="jyzm" type="String" format="@"></column>
+				<column name="房产证或购房协议" column="fczhhgfxy" type="String" format="@"></column>
+				<column name="了解渠道" column="ljqd" type="String" format="@"></column>
+				<column name="报名日期" column="createTime" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	
+	<!-- 导出长兴借读生报名学生信息 -->
+	<workbook name="cxStudent">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.CxStudentExport"></export>
+			<table name="columns">
+			    <column name="hide_0" column="id" type="String" format="@"></column>
+			    <column name="hide_1" column="siteId" type="String" format="@"></column>
+			    <column name="hide_2" column="headPicUrl" type="String" format="@"></column>
+			    <column name="hide_5" column="isDelete" type="String" format="@"></column>
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@"></column>
+				<column name="出生日期" column="birthday" type="Date" format="@"></column>
+				<column name="毕业小学" column="graduation" type="String" format="@"></column>
+				<column name="曾任职务" column="position" type="String" format="@"></column>
+				<column name="家庭住址" column="homeAddress" type="String" format="@"></column>
+				<column name="户口所在地" column="domicile" type="String" format="@"></column>
+				<column name="父亲姓名" column="fullName1" type="String" format="@"></column>
+				<column name="父亲工作单位" column="unit1" type="String" format="@"></column>
+				<column name="父亲联系方式" column="telephone1" type="String" format="@"></column>
+				<column name="母亲姓名" column="fullName2" type="String" format="@"></column>
+				<column name="母亲工作单位" column="unit2" type="String" format="@"></column>
+				<column name="母亲联系方式" column="telephone2" type="String" format="@"></column>
+				<column name="五年级第一学期语文" column="yuwen1" type="String" format="@"></column>
+				<column name="五年级第一学期数学" column="shuxue1" type="String" format="@"></column>
+				<column name="五年级第一学期英语" column="yingyu1" type="String" format="@"></column>
+				<column name="五年级第一学期排名" column="paiming1" type="String" format="@"></column>
+				<column name="五年级第二学期语文" column="yuwen2" type="String" format="@"></column>
+				<column name="五年级第二学期数学" column="shuxue2" type="String" format="@"></column>
+				<column name="五年级第二学期英语" column="yingyu2" type="String" format="@"></column>
+				<column name="五年级第二学期排名" column="paiming2" type="String" format="@"></column>
+				<column name="六年级第一学期语文" column="yuwen3" type="String" format="@"></column>
+				<column name="六年级第一学期数学" column="shuxue3" type="String" format="@"></column>
+				<column name="六年级第一学期英语" column="yingyu3" type="String" format="@"></column>
+				<column name="六年级第一学期排名" column="paiming3" type="String" format="@"></column>
+				<column name="六年级第二学期语文" column="yuwen4" type="String" format="@"></column>
+				<column name="六年级第二学期数学" column="shuxue4" type="String" format="@"></column>
+				<column name="六年级第二学期英语" column="yingyu4" type="String" format="@"></column>
+				<column name="六年级第二学期排名" column="paiming4" type="String" format="@"></column>
+				<column name="个人特长" column="rewardHobby" type="String" format="@"></column>
+				<column name="区以上获奖情况" column="rewardInArea" type="String" format="@"></column>
+				<column name="校内获奖情况" column="rewardInSchool" type="String" format="@"></column>
+				<column name="报名日期" column="createTime" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="lotteryStudent">
+		<sheet name="Sheet1">
+			<export name="export" class="com.base.excel.impl.LotteryStudentExport" />
+			<import name="import" class="com.base.excel.impl.LotteryStudentImport"/>
+			<table name="columns">
+				<!-- <column name="id" column="id" type="Integer" format="@"></column>			
+				<column name="状态(0未选中,1已选中)" column="status" type="Integer" format="@"></column> -->
+				<column name="姓名" column="name" type="String" format="@"></column>
+				<column name="性别" column="gender" type="String" format="@"></column>
+				<!-- <column name="出生年月日(xxxx/xx/xx)" column="birthday" type="String" format="@"></column> -->
+				<column name="毕业学校" column="school" type="String" format="@"></column>
+				<!-- <column name="身份证号" column="IDCard" type="String" format="@"></column>-->
+				<column name="全国学籍号" column="stuCode" type="String" format="@"></column>
+				<column name="父亲联系电话" column="phone" type="String" format="@"></column>
+				<column name="母亲联系电话" column="mPhone" type="String" format="@"></column>
+				<column name="状态" column="status" type="Integer" format="@"></column>
+				<!-- <column name="小升初编号" column="stuNo" type="String" format="@"></column> -->
+				<column name="随机号码" column="randomNum" type="String" format="@"></column>
+				<column name="顺序号" column="serialNum" type="String" format="@"></column>
+				<column name="hide_0" column="id" type="Integer" format="@"></column>
+				<column name="hide_1" column="lotteryId" type="Integer" format="@"></column>
+				<column name="hide_2" column="IDCard" type="Integer" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="tejiaoParent">
+		<sheet name="Sheet1">
+			<export name="export" class="com.tejiao.service.impl.ParentExportImpl"/>
+			<import name="import" class="com.tejiao.service.impl.ParentImportImpl"/>
+			<table name="columns">
+				<column name="账号" column="account" type="String" format="@"></column>
+				<column name="密码" column="password" type="String" format="@"></column>
+				<column name="名称" column="name" type="String" format="@"></column>
+				<column name="电子邮箱" column="email" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="tejiaoDeclare">
+		<sheet name="Sheet1">
+			<export name="export" class="com.tejiao.service.impl.DeclareExportImpl"/>
+			<table name="columns">
+				<column name="申报标题" column="title" type="String" format="@"></column>
+				<column name="学籍号" column="registry" type="String" format="@"></column>
+				<column name="申报学校" column="schoolName" type="String" format="@"></column>
+				<column name="学生姓名" column="name" type="String" format="@"></column>
+				<column name="学生性别" column="gender" type="String" format="@"></column>
+				<column name="出生日期" column="birth" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="身份证号码" column="idcard" type="String" format="@"></column>
+				<column name="户籍地址" column="census" type="String" format="@"></column>
+				<column name="入学时间" column="learnTime" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="年级" column="grade" type="String" format="@"></column>
+				<column name="是否已领残疾证" column="existence" type="String" format="@"></column>
+				<column name="监护人姓名" column="guardian" type="String" format="@"></column>
+				<column name="与监护人关系" column="relation" type="String" format="@"></column>
+				<column name="联系电话" column="phone" type="String" format="@"></column>
+				<column name="联系地址" column="email" type="String" format="@"></column>
+				<column name="初审情况" column="townCheckState" type="String" format="@"></column>
+				<column name="终审情况" column="districtCheckState" type="String" format="@"></column>
+				<column name="随班就读标号" column="code" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="tejiaoDeclareApply">
+		<sheet name="Sheet1">
+			<export name="export" class="com.tejiao.service.impl.DeclareApplyExportImpl"/>
+			<table name="columns">
+				<column name="申报标题" column="title" type="String" format="@"></column>
+				<column name="学籍号" column="registry" type="String" format="@"></column>
+				<column name="申报学校" column="schoolName" type="String" format="@"></column>
+				<column name="学生姓名" column="name" type="String" format="@"></column>
+				<column name="学生性别" column="gender" type="String" format="@"></column>
+				<column name="出生日期" column="birth" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="身份证号码" column="idcard" type="String" format="@"></column>
+				<column name="户籍地址" column="census" type="String" format="@"></column>
+				<column name="入学时间" column="learnTime" type="Date" format="yyyy年MM月dd日"></column>
+				<column name="年级" column="grade" type="String" format="@"></column>
+				<column name="是否已领残疾证" column="existence" type="String" format="@"></column>
+				<column name="监护人姓名" column="guardian" type="String" format="@"></column>
+				<column name="与监护人关系" column="relation" type="String" format="@"></column>
+				<column name="联系电话" column="phone" type="String" format="@"></column>
+				<column name="联系地址" column="email" type="String" format="@"></column>
+				<column name="免计算分数申请" column="freeCount" type="String" format="@"></column>
+				<column name="职中面试申请" column="applyAudition" type="String" format="@"></column>
+			</table>
+		</sheet>
+	</workbook>
+	<workbook name="tejiaoSchool">
+		<sheet name="Sheet1">
+			<export name="export" class="com.tejiao.service.impl.SchoolExportImpl"/>
+			<import name="import" class="com.tejiao.service.impl.SchoolImportImpl"/>
+			<table name="columns">
+				<column name="名称" column="name" type="String" format="@"></column>
+				<column name="所属镇街" column="town" type="String" format="@"></column>
+				<column name="区域/县" column="area" type="String" format="@" valueMethod="getArea"></column>
+				<column name="学校代号" column="code" type="String" format="@" regTip="学校代号必须为3位，如：123"></column>
+			</table>
+		</sheet>
+	</workbook>
+</root>
